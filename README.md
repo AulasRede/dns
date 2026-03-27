@@ -67,7 +67,12 @@ Valor em segundos que indica por quanto tempo uma resposta DNS pode ser armazena
 
 ## 🧪 Atividades Práticas
 
-> **⚠️ IMPORTANTE:** Para cada atividade, **copie a saída completa do terminal** (texto ou captura de tela) como evidência. Identifique cada evidência com o número da atividade correspondente.
+> **⚠️ IMPORTANTE:** Cada atividade contém itens de evidência identificados por códigos (ex.: **E1.1**, **E2.1**). O aluno deve entregar **todas** as evidências listadas, utilizando os códigos correspondentes para identificação no relatório.
+>
+> **Tipos de evidência:**
+> - 📸 **Captura** = Captura de tela ou cópia textual da saída do terminal
+> - 💬 **Resposta** = Resposta escrita (texto dissertativo ou objetivo)
+> - 📋 **Tabela** = Preenchimento de tabela
 
 ---
 
@@ -89,9 +94,13 @@ Agora saia do modo interativo:
 > exit
 ```
 
-**📝 Registre:**
-- O nome e o IP do servidor DNS padrão da sua máquina.
-- Este servidor é público (ex.: Google `8.8.8.8`, Cloudflare `1.1.1.1`) ou privado/institucional?
+**� Evidências da Atividade 1:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E1.1** | 📸 Captura | Saída completa do comando `nslookup` mostrando o servidor DNS padrão |
+| **E1.2** | 💬 Resposta | Nome e IP do servidor DNS padrão da sua máquina |
+| **E1.3** | 💬 Resposta | Este servidor é público (ex.: Google `8.8.8.8`, Cloudflare `1.1.1.1`) ou privado/institucional? Justifique |
 
 ---
 
@@ -114,9 +123,13 @@ nslookup www.usp.br
 nslookup www.gov.br
 ```
 
-**📝 Registre:**
-- Os endereços IP retornados para cada domínio.
-- Todas as respostas foram "Non-authoritative"? Por quê?
+**� Evidências da Atividade 2:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E2.1** | 📸 Captura | Saída do `nslookup` para `www.google.com`, `www.usp.br` e `www.gov.br` |
+| **E2.2** | 💬 Resposta | Endereços IP retornados para cada domínio |
+| **E2.3** | 💬 Resposta | Todas as respostas foram "Non-authoritative"? Explique por quê |
 
 ---
 
@@ -170,10 +183,13 @@ nslookup -type=TXT google.com
 
 Registros TXT são frequentemente usados para verificação de domínio (SPF, DKIM, DMARC) e outros metadados.
 
-**📝 Registre:**
-- A saída de cada comando acima.
-- Identifique pelo menos 2 servidores MX do Gmail e suas respectivas prioridades.
-- Qual o servidor primário (SOA) do domínio `google.com`?
+**� Evidências da Atividade 3:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E3.1** | 📸 Captura | Saída de cada um dos 6 comandos (MX, AAAA, CNAME, NS, SOA, TXT) |
+| **E3.2** | 💬 Resposta | Identifique pelo menos 2 servidores MX do Gmail e suas respectivas prioridades |
+| **E3.3** | 💬 Resposta | Qual o servidor primário (SOA) do domínio `google.com`? |
 
 ---
 
@@ -197,10 +213,14 @@ nslookup -debug www.google.com
 nslookup -debug www.google.com
 ```
 
-**📝 Registre:**
-- O valor de TTL na primeira e na segunda consulta.
-- O TTL diminuiu entre as duas consultas? Explique o motivo.
-- Se o TTL de um registro é 300 segundos, o que acontece quando esse tempo expira no cache do resolver?
+**� Evidências da Atividade 4:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E4.1** | 📸 Captura | Saída das duas execuções de `nslookup -debug www.google.com` (com intervalo de ~10s) |
+| **E4.2** | 💬 Resposta | Valor de TTL na primeira e na segunda consulta |
+| **E4.3** | 💬 Resposta | O TTL diminuiu entre as duas consultas? Explique o motivo |
+| **E4.4** | 💬 Resposta | Se o TTL de um registro é 300 segundos, o que acontece quando esse tempo expira no cache do resolver? |
 
 ---
 
@@ -238,10 +258,14 @@ E para um servidor público do Google:
 nslookup 8.8.8.8
 ```
 
-**📝 Registre:**
-- O nome retornado para cada IP consultado.
-- O nome retornado na consulta reversa é sempre idêntico ao nome consultado originalmente? Explique por que isso pode ocorrer.
-- O que é o domínio especial `in-addr.arpa` que aparece nas respostas?
+**� Evidências da Atividade 5:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E5.1** | 📸 Captura | Saída das consultas reversas para o IP do Google, `1.1.1.1` e `8.8.8.8` |
+| **E5.2** | 💬 Resposta | Nome retornado para cada IP consultado |
+| **E5.3** | 💬 Resposta | O nome retornado na consulta reversa é sempre idêntico ao nome consultado originalmente? Explique por que isso pode ocorrer |
+| **E5.4** | 💬 Resposta | O que é o domínio especial `in-addr.arpa` que aparece nas respostas? |
 
 ---
 
@@ -261,9 +285,13 @@ Agora, consulte o endereço IP de um deles:
 nslookup a.root-servers.net
 ```
 
-**📝 Registre:**
-- A lista completa dos servidores raiz retornados.
-- O IP do servidor `a.root-servers.net`.
+**� Evidências da Atividade 6:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E6.1** | 📸 Captura | Saída do comando `nslookup -type=NS .` e de `nslookup a.root-servers.net` |
+| **E6.2** | 💬 Resposta | Lista completa dos servidores raiz retornados |
+| **E6.3** | 💬 Resposta | IP do servidor `a.root-servers.net` |
 
 ---
 
@@ -303,10 +331,14 @@ nslookup www.usp.br ns1.usp.br
 
 Agora a resposta é **autoritativa** (authoritative answer) — ela vem diretamente do servidor responsável pelo domínio.
 
-**📝 Registre:**
-- A saída de cada um dos 3 passos.
-- Em qual passo a resposta mudou de "Non-authoritative" para "Authoritative"?
-- Desenhe um diagrama (pode ser à mão ou digital) mostrando o caminho percorrido: `Cliente → Raiz → TLD → Autoritativo`.
+**� Evidências da Atividade 7:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E7.1** | 📸 Captura | Saída do Passo 1 — consulta ao servidor raiz |
+| **E7.2** | 📸 Captura | Saída do Passo 2 — consulta ao servidor TLD (.br) |
+| **E7.3** | 📸 Captura | Saída do Passo 3 — consulta ao servidor autoritativo |
+| **E7.4** | 💬 Resposta | Em qual passo a resposta mudou de "Non-authoritative" para "Authoritative"? |
 
 ---
 
@@ -330,10 +362,14 @@ nslookup www.usp.br a.root-servers.net
 
 Ao especificar o servidor raiz, você força uma consulta direta a ele, que responde apenas com referrals.
 
-**📝 Registre:**
-- A diferença de conteúdo entre as duas respostas.
-- Por que na consulta 8.1 você recebe diretamente o IP, enquanto na 8.2 você recebe referências a outros servidores?
-- Qual modelo (recursivo ou iterativo) é mais comum na perspectiva do usuário final? E na perspectiva do resolver?
+**� Evidências da Atividade 8:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E8.1** | 📸 Captura | Saída da consulta recursiva (8.1) e da consulta iterativa (8.2) |
+| **E8.2** | 💬 Resposta | Diferença de conteúdo entre as duas respostas |
+| **E8.3** | 💬 Resposta | Por que na consulta 8.1 você recebe diretamente o IP, enquanto na 8.2 você recebe referências a outros servidores? |
+| **E8.4** | 💬 Resposta | Qual modelo (recursivo ou iterativo) é mais comum na perspectiva do usuário final? E na perspectiva do resolver? |
 
 ---
 
@@ -355,10 +391,15 @@ Observe que agora a resposta **não** contém a linha "Non-authoritative answer"
 
 Repita o processo para outro domínio à sua escolha (ex.: `amazon.com.br`, `gov.br`).
 
-**📝 Registre:**
-- Os servidores NS de `usp.br`.
-- A diferença visual na saída entre uma resposta autoritativa e uma não autoritativa.
-- Para o segundo domínio escolhido: quais são os servidores NS e qual IP foi retornado?
+**� Evidências da Atividade 9:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E9.1** | 📸 Captura | Saída de `nslookup -type=NS usp.br` e da consulta direta ao servidor autoritativo |
+| **E9.2** | 💬 Resposta | Servidores NS de `usp.br` |
+| **E9.3** | 💬 Resposta | Diferença visual na saída entre uma resposta autoritativa e uma não autoritativa |
+| **E9.4** | 📸 Captura | Saída das consultas NS e direta para o segundo domínio escolhido |
+| **E9.5** | 💬 Resposta | Para o segundo domínio: quais são os servidores NS e qual IP foi retornado? |
 
 ---
 
@@ -380,9 +421,13 @@ nslookup www.google.com 9.9.9.9
 | `1.1.1.1` | Cloudflare DNS |
 | `9.9.9.9` | Quad9 (com filtro de segurança) |
 
-**📝 Registre:**
-- Os IPs retornados por cada resolver para `www.google.com`.
-- Os resultados foram idênticos? Se não, por que provedores diferentes podem retornar IPs diferentes para o mesmo domínio? (Dica: pense em CDNs, Anycast e geolocalização.)
+**� Evidências da Atividade 10:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E10.1** | 📸 Captura | Saída dos 3 comandos `nslookup` usando os resolvers `8.8.8.8`, `1.1.1.1` e `9.9.9.9` |
+| **E10.2** | 📋 Tabela | Preencha: Resolver → IP retornado para `www.google.com` |
+| **E10.3** | 💬 Resposta | Os resultados foram idênticos? Se não, por que provedores diferentes podem retornar IPs diferentes para o mesmo domínio? (Considere CDNs, Anycast e geolocalização) |
 
 ---
 
@@ -398,10 +443,14 @@ nslookup -type=NS usp.br
 nslookup -type=NS ime.usp.br
 ```
 
-**📝 Registre:**
-- Os servidores NS em cada nível.
-- Existe delegação de `usp.br` para `ime.usp.br` (ou seja, `ime.usp.br` possui seus próprios servidores NS)?
-- O que aconteceria se o servidor autoritativo de `usp.br` ficasse fora do ar? A resolução de `www.ime.usp.br` seria afetada?
+**� Evidências da Atividade 11:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E11.1** | 📸 Captura | Saída dos comandos `nslookup -type=NS` para `br`, `usp.br` e `ime.usp.br` |
+| **E11.2** | 💬 Resposta | Servidores NS em cada nível da hierarquia |
+| **E11.3** | 💬 Resposta | Existe delegação de `usp.br` para `ime.usp.br` (ou seja, `ime.usp.br` possui seus próprios servidores NS)? |
+| **E11.4** | 💬 Resposta | O que aconteceria se o servidor autoritativo de `usp.br` ficasse fora do ar? A resolução de `www.ime.usp.br` seria afetada? |
 
 ---
 
@@ -420,10 +469,14 @@ Os registros **SPF** (Sender Policy Framework) definem quais servidores estão a
 nslookup -type=TXT _dmarc.usp.br
 ```
 
-**📝 Registre:**
-- O conteúdo do registro SPF de `google.com` (procure o registro que começa com `v=spf1`).
-- O conteúdo do registro DMARC de `google.com`.
-- O domínio `usp.br` possui registro DMARC configurado?
+**� Evidências da Atividade 12:**
+
+| Código | Tipo | Descrição |
+|--------|------|-----------|
+| **E12.1** | 📸 Captura | Saída dos comandos TXT para `google.com`, `_dmarc.google.com` e `_dmarc.usp.br` |
+| **E12.2** | 💬 Resposta | Conteúdo do registro SPF de `google.com` (registro que começa com `v=spf1`) |
+| **E12.3** | 💬 Resposta | Conteúdo do registro DMARC de `google.com` |
+| **E12.4** | 💬 Resposta | O domínio `usp.br` possui registro DMARC configurado? |
 
 ---
 
@@ -446,17 +499,69 @@ Ao final das atividades, preencha a tabela abaixo com base nas suas observaçõe
 
 ## ✅ Entregáveis
 
-O aluno deve entregar um **relatório** contendo os seguintes itens:
+O aluno deve entregar um **relatório** (utilize o documento modelo fornecido) contendo **todos** os itens abaixo.
 
-### 1. Evidências de Execução
-- Capturas de tela ou cópia textual da saída de **todas as 12 atividades**.
-- Cada evidência deve estar identificada com o número da atividade (ex.: "Atividade 7 — Passo 2").
+> **Formato de entrega:** Documento `.docx` ou `.pdf` seguindo o modelo disponibilizado junto ao roteiro.
 
-### 2. Respostas às Questões
-- Respostas completas e fundamentadas para **todas as perguntas** marcadas com 📝 ao longo do roteiro.
+### 1. Evidências de Execução (📸 Captura)
 
-### 3. Tabela de Resumo
-- A tabela de tipos de registro DNS (seção anterior) devidamente preenchida com exemplos reais obtidos durante a prática.
+Todas as evidências do tipo **📸 Captura** listadas nas atividades, identificadas pelo código correspondente.
+
+| Atividade | Evidências de Captura |
+|-----------|-----------------------|
+| 1 | E1.1 |
+| 2 | E2.1 |
+| 3 | E3.1 |
+| 4 | E4.1 |
+| 5 | E5.1 |
+| 6 | E6.1 |
+| 7 | E7.1, E7.2, E7.3 |
+| 8 | E8.1 |
+| 9 | E9.1, E9.4 |
+| 10 | E10.1 |
+| 11 | E11.1 |
+| 12 | E12.1 |
+
+**Total: 15 capturas**
+
+### 2. Respostas às Questões (💬 Resposta)
+
+Todas as evidências do tipo **💬 Resposta**, com respostas completas e fundamentadas.
+
+| Atividade | Evidências de Resposta |
+|-----------|------------------------|
+| 1 | E1.2, E1.3 |
+| 2 | E2.2, E2.3 |
+| 3 | E3.2, E3.3 |
+| 4 | E4.2, E4.3, E4.4 |
+| 5 | E5.2, E5.3, E5.4 |
+| 6 | E6.2, E6.3 |
+| 7 | E7.4 |
+| 8 | E8.2, E8.3, E8.4 |
+| 9 | E9.2, E9.3, E9.5 |
+| 10 | E10.3 |
+| 11 | E11.2, E11.3, E11.4 |
+| 12 | E12.2, E12.3, E12.4 |
+
+**Total: 25 respostas**
+
+### 3. Tabelas (📋 Tabela)
+
+| Código | Descrição |
+|--------|-----------|
+| **E10.2** | Tabela comparativa de IPs retornados por cada resolver |
+| **Tabela Final** | Tabela de resumo dos tipos de registro DNS (seção anterior) preenchida com exemplos reais |
+
+**Total: 2 tabelas**
+
+### Resumo Geral de Evidências
+
+| Tipo | Quantidade |
+|------|------------|
+| 📸 Capturas | 15 |
+| 💬 Respostas | 25 |
+| 📋 Tabelas | 2 |
+| **Total** | **42 itens** |
 
 ---
 
